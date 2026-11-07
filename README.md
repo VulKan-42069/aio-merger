@@ -9,13 +9,13 @@
 A small, fast desktop app for joining any mix of audio and video files into a single file,<br/>
 with clean title cards for songs, YouTube link downloads, and GPU encoding.
 
-[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0f0f10?style=flat-square&logo=windows&logoColor=white)](#-download)
-[![Linux](https://img.shields.io/badge/Linux-deb%20%7C%20rpm%20%7C%20AppImage-0f0f10?style=flat-square&logo=linux&logoColor=white)](#-download)
+[![Windows](https://img.shields.io/badge/Windows-10%20%7C%2011-0f0f10?style=flat-square&logo=windows&logoColor=white)](#download)
+[![Linux](https://img.shields.io/badge/Linux-deb%20%7C%20rpm%20%7C%20AppImage-0f0f10?style=flat-square&logo=linux&logoColor=white)](#download)
 [![Rust](https://img.shields.io/badge/Rust-Tauri%202-0f0f10?style=flat-square&logo=rust&logoColor=white)](https://tauri.app)
 [![FFmpeg](https://img.shields.io/badge/powered%20by-FFmpeg-0f0f10?style=flat-square&logo=ffmpeg&logoColor=white)](https://ffmpeg.org)
 [![License](https://img.shields.io/badge/license-GPL--3.0-0f0f10?style=flat-square)](LICENSE)
 
-[Download](#-download) · [Features](#-features) · [Title cards](#-title-cards) · [Build from source](#-build-from-source)
+[Download](#download) · [Features](#features) · [Title cards](#title-cards) · [Build from source](#build-from-source)
 
 <br/>
 
@@ -29,25 +29,25 @@ with clean title cards for songs, YouTube link downloads, and GPU encoding.
 
 <br/>
 
-## ✨ Features
+## Features
 
 |   |   |
 |---|---|
-| 🎚️ **Mix anything** | MP3, WAV, FLAC, M4A, OGG, OPUS… and MP4, MKV, MOV, WEBM, AVI… in one list. Drop whole folders; files sort naturally (`track 2` before `track 10`). |
-| 🎵 **One MP3** | Video audio is extracted, every source is decoded losslessly and encoded **once**, so joins stay gapless. |
-| 🎬 **One MP4** | Videos are fitted to one frame size (blur-fill, letterbox or crop). Songs get a **title card** with cover art, title, artist and an optional live waveform. |
-| 🔗 **YouTube links** | Paste a video or playlist link (`Ctrl+V` anywhere) and pick *Song* or *Video*. Title, channel and thumbnail are embedded, so title cards fill themselves in. |
-| ⚡ **Lossless join** | If every file already matches the output, they're joined with no re-encoding, in seconds. |
-| 🖥️ **GPU encoding** | NVIDIA NVENC, Intel Quick Sync and AMD AMF are detected automatically. |
-| 📑 **Chapters** | One chapter marker per source file, in both MP3 and MP4. |
-| 🌗 **Light & dark** | A quiet monochrome UI that follows your system theme. |
+| **Mix anything** | MP3, WAV, FLAC, M4A, OGG, OPUS… and MP4, MKV, MOV, WEBM, AVI… in one list. Drop whole folders; files sort naturally (`track 2` before `track 10`). |
+| **One MP3** | Video audio is extracted, every source is decoded losslessly and encoded **once**, so joins stay gapless. |
+| **One MP4** | Videos are fitted to one frame size (blur-fill, letterbox or crop). Songs get a **title card** with cover art, title, artist and an optional live waveform. |
+| **YouTube links** | Paste a video or playlist link (`Ctrl+V` anywhere) and pick *Song* or *Video*. Title, channel and thumbnail are embedded, so title cards fill themselves in. |
+| **Lossless join** | If every file already matches the output, they're joined with no re-encoding, in seconds. |
+| **GPU encoding** | NVIDIA NVENC, Intel Quick Sync and AMD AMF are detected automatically. |
+| **Chapters** | One chapter marker per source file, in both MP3 and MP4. |
+| **Light & dark** | A quiet monochrome UI that follows your system theme. |
 
 <div align="center">
 <img src="docs/screenshots/mp3-light.png" alt="MP3 output settings" width="49%" />
 <img src="docs/screenshots/link-dark.png" alt="Add from link dialog" width="49%" />
 </div>
 
-## 🖼️ Title cards
+## Title cards
 
 When songs end up in an MP4, each one gets a rendered title card for its whole length.
 Pick a template and an accent colour, and toggle the waveform. Frame sizes include 720p, 1080p, 1440p, square (1:1) and vertical (9:16).
@@ -63,7 +63,7 @@ Pick a template and an accent colour, and toggle the waveform. Frame sizes inclu
   </tr>
 </table>
 
-## 📦 Download
+## Download
 
 Grab the latest build from the [**Releases**](../../releases) page.
 
@@ -78,7 +78,7 @@ Grab the latest build from the [**Releases**](../../releases) page.
 > The Windows installer is per-user (no admin prompt) and lets you choose the install folder.
 > YouTube downloads are saved to a `Downloads` folder next to the app by default; change it any time in **⋯ → Add from link… → Change**.
 
-## 🚀 Using it
+## Using it
 
 1. **Add clips.** Drop files or folders onto the window, click **Add** (`Ctrl+O`), or paste a YouTube link.
 2. **Arrange them.** Drag to reorder, or use **⋯** to sort by name or length, or reverse.
@@ -90,7 +90,7 @@ Grab the latest build from the [**Releases**](../../releases) page.
 </div>
 
 <details>
-<summary><b>⌨️ Keyboard shortcuts</b></summary>
+<summary><b>Keyboard shortcuts</b></summary>
 
 <br/>
 
@@ -107,7 +107,7 @@ Grab the latest build from the [**Releases**](../../releases) page.
 </details>
 
 <details>
-<summary><b>🔗 How YouTube downloads work</b></summary>
+<summary><b>How YouTube downloads work</b></summary>
 
 <br/>
 
@@ -122,7 +122,7 @@ Only download content you have the right to. YouTube's terms of service restrict
 
 </details>
 
-## 🛠️ Build from source
+## Build from source
 
 **You'll need:** [Rust](https://rustup.rs) (stable), [Node.js](https://nodejs.org) 18+, and on Windows the [MSVC Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
@@ -165,7 +165,7 @@ Installers land in `src-tauri/target/release/bundle/`.
 **FFmpeg lookup order:** `AIO_MERGER_FFMPEG_DIR` → bundled `resources/ffmpeg/` → next to the executable → `PATH`.
 
 <details>
-<summary><b>📁 Project layout</b></summary>
+<summary><b>Project layout</b></summary>
 
 <br/>
 
@@ -193,7 +193,7 @@ scripts/
 
 </details>
 
-## 📄 License
+## License
 
 AIO Merger is released under the [GNU GPL v3.0](LICENSE).
 
