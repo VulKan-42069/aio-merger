@@ -1,0 +1,54 @@
+# ── Dependencies ─────────────────────────────
+node_modules/
+
+# ── Rust / Tauri build output ────────────────
+src-tauri/target/
+src-tauri/gen/
+**/*.rs.bk
+
+# ── Bundled runtimes (fetched by `npm run fetch-ffmpeg`) ──
+ffmpeg/
+
+# ── Built installers (publish them on GitHub Releases instead) ──
+release/
+*.exe
+*.msi
+*.deb
+*.rpm
+*.AppImage
+*.dmg
+
+# ── Media you test with ──────────────────────
+*.mp3
+*.mp4
+*.m4a
+*.mkv
+*.mov
+*.webm
+*.wav
+*.flac
+*.part
+*.ytdl
+
+# ── Logs & temp ──────────────────────────────
+*.log
+*.tmp
+.aio-merger-*/
+
+# ── Local env / secrets ──────────────────────
+.env
+.env.*
+
+# ── Editors & tools ──────────────────────────
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+.claude/settings.local.json
+
+# ── OS junk ──────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
